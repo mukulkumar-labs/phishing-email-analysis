@@ -1,1 +1,31 @@
+# IOC List — Phishing Email Analysis
+# Sample: sample-10.eml
+# Analyst: Mukul
+# Date: 21 June 2026
+# ============================================
+
+[EMAIL ADDRESSES]
+no-reply@access-accsecurity.com     # Spoofed sender — fake Microsoft address
+sotrecognizd@gmail.com              # Attacker reply-to address
+bounce@thcultarfdes.co.uk           # Real return-path — mismatch with From
+
+[DOMAINS]
+access-accsecurity.com              # Typosquatted Microsoft domain
+thcultarfdes.co.uk                  # Attacker sending domain — now unregistered
+thebandalisty.com                   # Phishing redirect domain — now unregistered
+
+[IP ADDRESSES]
+89.144.44.2                         # Originating IP — Warsaw, Poland — MSCode.pl (AS201132)
+
+[URLS]
+http://thebandalisty.com/track/o43062rdzGz18708448Gdrw1821750fYo33632dSjh176
+                                    # Tracking/redirect URL — 10/92 VT detections
+                                    # Vendors: BitDefender, Fortinet, Sophos, G-Data, CyRadar
+
+[HASHES]
+# No attachment found in this sample
+
+# ============================================
+# Verdict: MALICIOUS — Microsoft Account Phishing
+# ============================================
 
